@@ -3,9 +3,9 @@
 ###### This is just an \[🔬 experiment\].
 
 #### Description:
-A Python with Django experiment on creating a simple RESTful compliant web application. [try it live](https://frarizzi.science/experiments/python-django-simple-app/)
+A Python with Django experiment on creating a simple RESTful compliant web application. [try it live](https://frarizzi.science/experiments/python-django-simple-rest-app/)
 
-Responsive Front-end for managing phone contacts consumed via RESTful API provied by a Python - Django server.
+Responsive Front-end for managing phone contacts consumed via RESTful API provided by a Python - Django server.
 
 #### Tech stuff 👾:
 - Python 🐍
@@ -17,4 +17,5 @@ Responsive Front-end for managing phone contacts consumed via RESTful API provie
 - mod_wsgi
 - HTML
 - CSS
+- JavaScript
 - jQuery

@@ -6,7 +6,8 @@ __pycache__/
 local_settings.py
 db.sqlite3
 media
-static/
+/static/
+!/static/basics/
 
 ### macOS ###
 *.DS_Store

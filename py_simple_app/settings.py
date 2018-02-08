@@ -19,7 +19,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
+# SECURITY WARNING: keep the secret key used in production secret! <-- CURRENTLY NOT USED
 SECRET_KEY = '*g#@d#z@^3q#9u)#&(%k0!2g(v4r-*aef9q!&@-apj9c(c)w=8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -53,6 +53,12 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'py_simple_app.urls'
 
 TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.jinja2.Jinja2',
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'APP_DIRS': True,
+        'OPTIONS': {'environment': 'py_simple_app.jinja2.Environment', },
+    },
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],

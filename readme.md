@@ -15,6 +15,7 @@ Responsive Front-end for managing phone contacts consumed via RESTful API provid
 - virtualenv
 - Apache
 - mod_wsgi
+- Jinja
 - HTML
 - CSS
 - JavaScript

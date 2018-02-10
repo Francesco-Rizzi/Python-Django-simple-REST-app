@@ -1,5 +1,11 @@
 {% extends 'layout.jinja.html' %}
 
 {% block main %}
-	testttt
+	{% for n in range(4) %}
+		{% include 'contact_item.jinja.html' %}
+	{% endfor %}
+
+	<div>
+		<button>add contact</button>
+	</div>
 {% endblock %}

@@ -1,5 +1,11 @@
 .container {
-  max-width: 1380px;
+  max-width: 1024px;
   margin: 0 auto; }
+
+h1 {
+  font-size: 36px; }
+
+h2 {
+  font-size: 28px; }
 
 /*# sourceMappingURL=style.css.map */

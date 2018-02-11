@@ -2,11 +2,13 @@
 const ENDPOINT     = '/api/ContactUser/';
 const $mainWrapper = $('body');
 let items          = [];
+let unFiltered     = false;
 
 //INITIAL VIEW
 $.get(ENDPOINT).then(data =>{
 	
 	items = data;
+	sortItems();
 	renderView();
 	
 });
@@ -36,6 +38,11 @@ $mainWrapper.delegate('.js-submit-form', 'submit', e =>{
 
 $mainWrapper.delegate('.js-close-form', 'click', e =>{
 	closeForm();
+});
+
+//FILTERING
+$mainWrapper.delegate('.js-filter-input', 'keyup', e =>{
+	handleFilter(e);
 });
 
 //UTILITIES
@@ -70,6 +77,7 @@ function closeForm(){
 	
 	$modal.removeClass('is-visible');
 	$mainWrapper.removeClass('mod-modal');
+	$form[ 0 ].reset();
 	
 }
 
@@ -104,10 +112,10 @@ function handleForm( e ){
 				   } else {
 				
 					   items.push(result);
-					   _.sortBy(items, [ 'name', 'surname' ]);
 				
 				   }
 			
+				   sortItems();
 				   renderView();
 				   closeForm();
 			
@@ -152,6 +160,44 @@ function renderView(){
 	
 }
 
+function sortItems(){
+	items.sort(( a, b ) => itemToSTR(a).localeCompare(itemToSTR(b)));
+}
+
+function itemToSTR( item ){
+	return `${item.name} ${item.surname}`.toLowerCase();
+}
+
+function handleFilter( e ){
+	
+	let currentKey = e.target.value;
+	console.log(e.target);
+	console.log(currentKey);
+	if ( currentKey ) {
+		filter(currentKey);
+	} else {
+		clearFilter();
+	}
+	
+	renderView();
+	
+}
+
+function filter( key ){
+	
+	unFiltered = unFiltered || items;
+	items      = _.filter(items, function( item ){
+		return itemToSTR(item).includes(key);
+	});
+	
+}
+
+function clearFilter(){
+	
+	items = unFiltered || items;
+	
+}
+
 function createContactUser( item ){
 	
 	return `<div class="contact-item js-contact-item" data-id="${item.id}" data-name="${item.name}" data-surname="${item.surname}" data-mobile="${item.mobile}" data-email="${item.email}" data-info="${item.info}">
@@ -160,11 +206,11 @@ function createContactUser( item ){
 		</div>
 		<div class="contact-item-text">
 			<h3 class="contact-item-name">${item.name} ${item.surname}</h3>
-			<p class="contact-item-number">${item.mobile}</p>
-		</div>
-		<div>
-			<button class="js-edit-contact-form">edit</button>
-			<button class="js-delete-contact">delete</button>
+			<p class="contact-item-number"><a href="tel:${item.mobile}">${item.mobile}</a></p>
+			<div class="contact-item-buttons">
+				<button class="js-delete-contact link-mod-delete">delete</button>
+				<button class="js-edit-contact-form">edit</button>
+			</div>
 		</div>
 	</div>`;
 	

@@ -18,7 +18,7 @@ h1 {
 	font-size: 36px;
 }
 
-h2 {
+h2, h2 a {
 	font-size: 28px;
 }
 
@@ -168,7 +168,6 @@ button {
 
 .actions {
 	padding-bottom: 30px;
-	overflow: hidden;
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
@@ -179,7 +178,7 @@ button {
 	background: #EEEEEE;
 	border-radius: 3px;
 	border: 1px solid #E4E4E4;
-	padding: 5px 10px;
+	padding: 7px 10px;
 	margin-left: 5px;
 	width: 100px;
 }

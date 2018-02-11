@@ -1,11 +1,20 @@
 {% extends 'layout.jinja.html' %}
 
 {% block main %}
-	{% for n in range(4) %}
-		{% include 'contact_item.jinja.html' %}
-	{% endfor %}
+
+	<div class="contact-items js-contact-items">
+
+	</div>
 
 	<div>
-		<button>add contact</button>
+		<button class="js-new-contact-form">add contact</button>
 	</div>
+
+{% endblock %}
+
+{% block modal %}
+
+	{{ super() }}
+	{% include 'contact_form.jinja.html' %}
+
 {% endblock %}

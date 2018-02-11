@@ -1,9 +1,21 @@
-<div>
-	<form action="/api/<formType>"> {# Will be changed by JS #}
-		<input type="text" name="name">
-		<input type="text" name="surname">
-		<input type="text" name="number">
-		<a href="">cancel</a>
+<div class="modal-form js-modal-form">
+	<form action="/api/ContactUsers/" class="js-main-form js-submit-form">
+		<label>Name:
+			<input type="text" name="name" required>
+		</label>
+		<label>Surname:
+			<input type="text" name="surname" required>
+		</label>
+		<label>Mobile:
+			<input type="text" name="mobile" required>
+		</label>
+		<label>Email:
+			<input type="text" name="email">
+		</label>
+		<label>Notes:
+			<textarea name="info"></textarea>
+		</label>
+		<a href="#" class="js-close-form">cancel</a>
 		<button>save</button>
 	</form>
 </div>

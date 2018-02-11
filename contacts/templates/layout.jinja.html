@@ -1,66 +1,11 @@
 <!DOCTYPE html>
 <html lang="EN">
-	<head>
-		
-		<meta charset="utf-8">
-		
-		<title>Python - Django simple REST app 🐍 | Francesco Rizzi</title>
-		<meta name="description" content="Python with Django experiment on creating a simple RESTful compliant web application.">
-		
-		<!-- Google Tag Manager -->
-		<!--<script>(function( w, d, s, l, i ){
-			w[ l ] = w[ l ] || [];
-			w[ l ].push({
-							'gtm.start' : new Date().getTime(),
-							event       : 'gtm.js'
-						});
-			var f   = d.getElementsByTagName(s)[ 0 ], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-			j.async = true;
-			j.src   = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-			f.parentNode.insertBefore(j, f);
-		})(window, document, 'script', 'dataLayer', 'GTM-T8CWQD6');</script>-->
-		<!-- End Google Tag Manager -->
-		
-		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		{% block styles %}
-			<link rel="stylesheet" href="static/contacts/style.css">
-		{% endblock %}
+	{% include 'head.jinja.html' %}
 
-		<link rel="apple-touch-icon" sizes="57x57" href="static/basics/favicon/apple-icon-57x57.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="static/basics/favicon/apple-icon-60x60.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="static/basics/favicon/apple-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="static/basics/favicon/apple-icon-76x76.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="static/basics/favicon/apple-icon-114x114.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="static/basics/favicon/apple-icon-120x120.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="static/basics/favicon/apple-icon-144x144.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="static/basics/favicon/apple-icon-152x152.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="static/basics/favicon/apple-icon-180x180.png">
-		<link rel="icon" type="image/png" sizes="192x192" href="static/basics/favicon/android-icon-192x192.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="static/basics/favicon/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="96x96" href="static/basics/favicon/favicon-96x96.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="static/basics/favicon/favicon-16x16.png">
-		<link rel="manifest" href="static/basics/favicon/manifest.json">
-		<meta name="msapplication-TileColor" content="#ffffff">
-		<meta name="msapplication-TileImage" content="static/basics/favicon/ms-icon-144x144.png">
-		<meta name="theme-color" content="#ffffff">
-		
-		<!--OG-->
-		<meta property="og:title" content="Python - Django simple REST app 🐍 | Francesco Rizzi" />
-		<meta property="og:description" content="Python with Django experiment on creating a simple RESTful compliant web application." />
-		<meta property="og:image" content="https://frarizzi.science/experiments/python-django-simple-rest-app/static/basics/og.jpg" />
-		<meta name="twitter:image" content="https://frarizzi.science/experiments/python-django-simple-rest-app/static/basics/og.jpg">
-		<meta property="og:url" content="https://frarizzi.science/experiments/python-django-simple-rest-app/" />
-		<meta property="og:type" content="article" />
-		<meta property="og:site_name" content="frarizzi.science" />
-		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:image:alt" content="An image showing the Python - Django simple REST app logo">
-		<meta name="twitter:site" content="@0xFFrancesco">
-	
-	</head>
 	<body>
 
-		<!-- Google Tag Manager (noscript) -->
+		<!-- Google Tag Manager (noscript) --> {# TODO ENABLE GTM WHEN DEPLOY #}
 		<!--<noscript>-->
 			<!--<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8CWQD6"-->
 					<!--height="0" width="0" style="display:none;visibility:hidden"></iframe>-->
@@ -85,11 +30,15 @@
 
 			</div>
 
+			{% block modal %}
+			{% endblock %}
+
 		</div>
 
 		{% block script %}
 			<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-			<script src="static/contacst/app.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.5/lodash.min.js" crossorigin="anonymous"></script>
+			<script src="static/contacts/app.js"></script>
 		{% endblock %}
 
 	</body>

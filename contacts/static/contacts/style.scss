@@ -1,12 +1,63 @@
-.container{
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body.mod-modal {
+	overflow: hidden;
+}
+
+* {
+	box-sizing: border-box;
+	font-size: 16px;
+	color: #333333;
+}
+
+h1 {
+	font-size: 36px;
+}
+
+h2 {
+	font-size: 28px;
+}
+
+.container {
 	max-width: 1024px;
 	margin: 0 auto;
 }
 
-h1{
-	font-size: 36px;
+.modal-form {
+	display: none;
+	height: 100vh;
+	width: 100vw;
+	overflow: auto;
+	background: rgba(255, 255, 255, 0.85);
+	position: fixed;
+	top: 0;
+	left: 0;
+	align-items: center;
+	justify-content: center;
+	&.is-visible {
+		display: flex;
+	}
+	label {
+		display: block;
+	}
+	input, textarea {
+		display: block;
+		border: none;
+		background: #E4E4E4;
+		border-radius: 3px;
+		width: 300px;
+		padding: 5px 10px;
+		margin: 5px 0 15px;
+	}
+	input {
+		height: 30px;
+	}
+	textarea {
+		height: 150px;
+		resize: none;
+	}
 }
 
-h2{
-	font-size: 28px;
-}

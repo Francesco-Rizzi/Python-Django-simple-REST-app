@@ -171,8 +171,7 @@ function itemToSTR( item ){
 function handleFilter( e ){
 	
 	let currentKey = e.target.value;
-	console.log(e.target);
-	console.log(currentKey);
+	
 	if ( currentKey ) {
 		filter(currentKey);
 	} else {

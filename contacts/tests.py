@@ -16,7 +16,8 @@ class ViewTestCase(TestCase):
         self.response = self.client.post(
             ENDPOINT,
             self.contact_user_data,
-            format="json")
+            format="json"
+        )
 
     def test_api_can_create_a_contact(self):
         self.assertEqual(self.response.status_code, status.HTTP_201_CREATED)
@@ -50,7 +51,8 @@ class ViewTestCase(TestCase):
         contact = ContactUser.objects.get()
         response = self.client.delete(
             "{}{}/".format(ENDPOINT, contact.id),
-            format='json', follow=True)
+            format='json', follow=True
+        )
         self.assertEquals(response.status_code, status.HTTP_204_NO_CONTENT)
         response = self.client.get(
             "{}{}/".format(ENDPOINT, contact.id),

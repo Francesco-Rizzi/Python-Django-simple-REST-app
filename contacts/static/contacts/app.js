@@ -122,7 +122,7 @@ function handleForm( e ){
 function deleteContact( id ){
 	
 	$.ajax({
-			   url     : ENDPOINT + id,
+			   url     : ENDPOINT + id + '/',
 			   type    : 'DELETE',
 			   success : function(){
 			

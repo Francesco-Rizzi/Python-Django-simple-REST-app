@@ -11,6 +11,7 @@ Responsive Front-end for managing phone contacts consumed via RESTful API provid
 - Python 🐍
 - Django
 - DRF (Django REST Framework)
+- Django API tests
 - SQLite
 - virtualenv
 - Apache
@@ -18,6 +19,7 @@ Responsive Front-end for managing phone contacts consumed via RESTful API provid
 - Jinja
 - HTML
 - CSS
+- SASS
 - JavaScript
 - jQuery
 - Lodash

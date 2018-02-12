@@ -1,5 +1,6 @@
 //CONFIG & DATA
-const ENDPOINT     = 'api/ContactUser/';
+const path         = window.location.pathname;
+const ENDPOINT     = path + (path[path.length ] == '/' ? '' : '/') + 'api/ContactUser/';
 const $mainWrapper = $('body');
 let items          = [];
 let unFiltered     = false;

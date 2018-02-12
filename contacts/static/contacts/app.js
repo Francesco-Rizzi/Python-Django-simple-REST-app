@@ -1,5 +1,5 @@
 //CONFIG & DATA
-const ENDPOINT     = '/api/ContactUser/';
+const ENDPOINT     = 'api/ContactUser/';
 const $mainWrapper = $('body');
 let items          = [];
 let unFiltered     = false;

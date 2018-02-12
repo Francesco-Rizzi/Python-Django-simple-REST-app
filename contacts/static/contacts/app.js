@@ -202,7 +202,7 @@ function createContactUser( item ){
 	
 	return `<div class="contact-item js-contact-item" data-id="${item.id}" data-name="${item.name}" data-surname="${item.surname}" data-mobile="${item.mobile}" data-email="${item.email}" data-info="${item.info}">
 		<div class="contact-item-image-wrapper">
-			<img src="static/contacts/images/avatar.jpg" alt="User avatar">
+			<img src="/pythons-simple-rest-app-static/contacts/images/avatar.jpg" alt="User avatar">
 		</div>
 		<div class="contact-item-text">
 			<h3 class="contact-item-name">${item.name} ${item.surname}</h3>

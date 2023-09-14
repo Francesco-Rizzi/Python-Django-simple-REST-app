@@ -3,7 +3,7 @@
 ###### This is just an \[🔬 experiment\].
 
 #### Description:
-A Python with Django experiment on creating a simple RESTful compliant web application. [try it live](https://frarizzi.science/experiments/python-django-restful-web-app/)
+A Python with Django experiment on creating a simple RESTful compliant web application. 
 
 Responsive Front-end for managing phone contacts consumed via RESTful API provided by a Python - Django server.
 
